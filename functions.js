@@ -83,7 +83,90 @@ function GoogleDrev() {
     window.open(url,'_self');  
 }
 
+function Conjugator() {
+    var SI="NEJ";
+    var Inp;
+    Inp = document.getElementById('SInput').value
+    url ='https://conjugator.reverso.net/conjugation-english-verb-' + Inp + '.html';
+    window.open(url,'_self');  
+}
 
+
+//--CONTROL INPUTS--
+var bool, ALT = false;
+var ALTcode = 18;
+var bool, B = false;
+var Bcode = 66;
+var bool,Y = false;
+var Ycode = 89;
+//https://docstore.mik.ua/orelly/webprog/DHTML_javascript/0596004672_jvdhtmlckbk-app-b.html
+
+
+//ENTER KEY!!
+document.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {        
+        if(ALT && B){
+            ImageSearch();
+        }
+        else if(ALT && Y){
+            YoutubeSearch();
+        } 
+        else{
+            GoogleSearch();
+        }
+    }
+});
+
+
+//Alt Key
+document.addEventListener("keydown", function(event) {
+    if (event.keyCode === ALTcode) {
+        ALT = true;
+        console.log('ALT DOWN');
+    }
+});
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === ALTcode) {
+        ALT = false;
+        console.log('ALT UP');
+    }
+});
+
+//B Key
+document.addEventListener("keydown", function(event) {
+    if (event.keyCode === Bcode) {
+        B = true;
+        console.log('B DOWN');
+    }
+});
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === Bcode) {
+        B = false;
+        console.log('B UP');
+    }
+});
+
+//Y Key
+document.addEventListener("keydown", function(event) {
+    if (event.keyCode === Ycode) {
+        Y = true;
+        console.log('Y DOWN');
+    }
+});
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === Ycode) {
+        Y = false;
+        console.log('Y UP');
+    }
+});
+
+
+
+if (event.keyCode === 83) {
+            if (event.keyCode === 13) {
+                alert('Enter is pressed!');
+            }
+        }
 
 
 //Hyper Links
