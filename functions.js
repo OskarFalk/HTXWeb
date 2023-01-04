@@ -91,6 +91,14 @@ function Conjugator() {
     window.open(url,'_self');  
 }
 
+function AllKeyShop(){
+    var SI="NEJ";
+    var Inp;
+    Inp = document.getElementById('SInput').value
+    url ='https://www.allkeyshop.com/blog/catalogue/search-' + Inp;
+    window.open(url,'_self');  
+}
+
 
 //--CONTROL INPUTS--
 var bool, ALT = false;

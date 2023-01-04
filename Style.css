@@ -192,7 +192,8 @@ body{
 }
 
 #container2 input{
-    width: 5%;
+    width: 4%;
+    height: 25px;
     margin-left: 1%;
 }
 
